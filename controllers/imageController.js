@@ -11,7 +11,7 @@ exports.index = function(req, res) {
             Image.count({}, callback);
         },
     }, function(err, results) {
-        res.render('index', { title: 'Local Library Home', error: err, data: results });
+        res.render('photography', { error: err, data: results });
     });
 };
 

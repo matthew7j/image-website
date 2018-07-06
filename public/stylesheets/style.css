@@ -5,3 +5,25 @@ body {
 .images_container {
     padding: 15px;
 }
+
+.banner_image_wrapper {
+    background-image: url("../images/DSC_3825_PS.jpg");
+    height: 500px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.banner_image_text {
+    vertical-align: middle;
+}
+
+.center_button {
+    text-align: center;
+    text-align: center;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

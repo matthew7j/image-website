@@ -18,10 +18,30 @@ html(lang='en')
             a(href='/') Home
           li
             a(href='/photography') Photography
+          li
+            a(href='/photography/gear') Gear
           li 
-            a(href='/photography/images') All images
+            a(href='/photography/images') Gallery
           li 
             a(href='/photography/image/create') Create new image
       div
         block content
+
+      footer(class='page-footer')
+        div(class='footer-copyright')
+          div(class='footer_container')
+            div(class='footer_row')
+              div(class='icon_container')
+                div(class='col 16 s12')
+                  span(class='icon_container_individual')
+                    a(href='https://instagram.com/matthew7j')
+                      img(class='icon', src="../icons/ig.png")
+                  span(class='icon_container_individual')
+                    a(href='https://www.facebook.com/matthew7j')
+                      img(class='icon', src="../icons/fb.png")
+                  span(class='icon_container_individual')
+                    a(href='https://www.github.com/matthew7j')
+                      img(class='icon', src="../icons/github.png")
+          span(class='footer_container') @2018 Copyright text
+
     script(type='text/javascript', src='/javascripts/materialize.js')

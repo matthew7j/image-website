@@ -27,3 +27,44 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+.icon {
+    width: 30px;
+    height: 30px;
+    -webkit-transition: opacity .3s linear 0s;
+    transition: opacity .3s linear 0s;
+}
+
+.icon:hover {
+    opacity: .5;
+}
+
+.icon_container {
+    text-align: right;
+    padding-top: 15px;
+}
+
+.icon_container_individual {
+    padding: 7px;
+}
+
+.footer_container {
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.footer_row {
+    margin: 0;
+    padding: 0;
+}
+
+#footer {
+    color: black;
+    height: 200px;
+}
+
+#footer_inner {
+    padding: 20px;
+    text-align: center;
+}

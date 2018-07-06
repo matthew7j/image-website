@@ -34,4 +34,9 @@ router.get('/image/:id', image_controller.image_detail);
 // GET request for list of all Image items.
 router.get('/images', image_controller.image_list);
 
+router.get('/gear', function(req, res, next) {
+    console.log('in here');
+    res.render('gear');
+});
+
 module.exports = router;

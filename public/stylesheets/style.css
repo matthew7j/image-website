@@ -10,7 +10,8 @@ body {
 }
 
 .images_container {
-    padding: 15px;
+    padding: 0;
+    margin: 15px;
 }
 
 .banner_image_wrapper {
@@ -58,6 +59,11 @@ body {
     transform: translate(-50%, -50%);
 }
 
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .btn_spacing {
     margin: 10px;
 }
@@ -81,6 +87,10 @@ body {
     padding: 7px;
 }
 
+.image_list {
+    padding: 15px;
+}
+
 .footer_container {
     margin: 0;
     padding-left: 20px;
@@ -98,6 +108,10 @@ body {
 .footer_row {
     margin: 0;
     padding: 0;
+}
+
+.no_margin {
+    margin: 0 !important;
 }
 
 .z_bottom {

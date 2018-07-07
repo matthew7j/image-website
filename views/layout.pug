@@ -13,32 +13,32 @@ html(lang='en')
   body
     ul(id='dropdown1', class='dropdown-content')
       li
-        a(href='/photography/gear') Gear
+        a(href='/photography/gear') GEAR
       li
-        a(href='/photography/images') Gallery
+        a(href='/photography/images') GALLERY
     ul(id='dropdown2', class='dropdown-content')
       li
-        a(href='/photography/gear') Gear
+        a(href='/photography/gear') GEAR
       li
-        a(href='/photography/images') Gallery
+        a(href='/photography/images') GALLERY
     nav
       div(class='nav-wrapper')
-        a(href='/', class='brand-logo')
-          img(src='../images/logo.png', height='40', width='150')
         a(href='#', data-target='mobile-demo', class='sidenav-trigger')
           i(class='material-icons') menu
-        ul(id='nav-mobile', class='right hide-on-med-and-down')
+        ul(id='nav-mobile', class='left hide-on-med-and-down')
           li
-            a(href='/') Home
+            a(href='/') HOME
           li
-            a(class="dropdown-trigger" href="#!" data-target="dropdown1") Photography
+            a(class="dropdown-trigger" href="#!" data-target="dropdown1") PHOTOGRAPHY
               i(class="material-icons right") arrow_drop_down
+        a(href='/', class='brand-logo right')
+          img(src='../images/logo.png', height='40', width='150')
 
       ul(class='sidenav', id='mobile-demo')
         li
-          a(href='/') Home
+          a(href='/') HOME
         li
-          a(class="dropdown-trigger" href="#!" data-target="dropdown2") Photography
+          a(class="dropdown-trigger" href="#!" data-target="dropdown2") PHOTOGRAPHY
               i(class="material-icons right") arrow_drop_down
     div
       block content 

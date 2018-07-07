@@ -4501,7 +4501,7 @@ nav .brand-logo.center {
     }
     nav .brand-logo.left,
     nav .brand-logo.right {
-        padding: 0;
+        padding: 10px;
         -webkit-transform: none;
         transform: none;
     }
@@ -4516,7 +4516,7 @@ nav .brand-logo.center {
 
 nav .brand-logo.right {
     right: 0.5rem;
-    padding: 0;
+    padding: 10px;
 }
 
 nav .brand-logo i,

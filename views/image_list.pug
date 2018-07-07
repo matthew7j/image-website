@@ -1,12 +1,10 @@
 extends layout
 
 block content
-  div(class='images_container')
-    div(class='row')
+  div(class='images_container') 
+    div(class='row flex')
       each image in image_list
-        div(class='col m4')
+        div(class='col s6 m4 l3 no_margin')
           div(class='card')
             div(class='card-image')
-              img.className#IdName(src=image.signedUrl alt="Image Title")
-  li 
-    a(href='/photography/image/create') Create new image
+              img(src=image.signedUrl)

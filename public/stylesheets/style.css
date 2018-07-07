@@ -1,4 +1,4 @@
-html{
+html {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -15,7 +15,7 @@ body {
 .banner_image_wrapper {
     background-image: url("../images/DSC_3825_PS.jpg");
     top: -64px;
-    min-height: 100%; 
+    min-height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -87,9 +87,25 @@ body {
     padding-right: 20px;
 }
 
+.footer_outer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
 .footer_row {
     margin: 0;
     padding: 0;
+}
+
+.z_bottom {
+    z-index: 0;
+}
+
+.z_top {
+    z-index: 10;
 }
 
 #footer {

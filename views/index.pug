@@ -1,7 +1,29 @@
 extends layout
 
 block content
-  div(class='banner_image_wrapper')
-  div(class='center_button')
-    a(href='/photography', class='waves-effect waves-light btn-large btn_spacing') Photography
-    a(href='/photograph/gear', class='waves-effect waves-light btn-large btn_spacing') Gear
+  //- div(class='banner_image_wrapper')
+  //- div(class='center_button')
+  //-   a(href='/photography', class='waves-effect waves-light btn-large btn_spacing') Photography
+  //-   a(href='/photograph/gear', class='waves-effect waves-light btn-large btn_spacing') Gear
+
+  div(class='slider fullscreen z_bottom')
+    ul(class='slides')
+      li
+        img(src='images/DSC_1199.jpg')
+      li
+        img(src='images/DSC_1659.jpg')
+      li
+        img(src='images/DSC_3825_PS.jpg')
+      li
+        img(src='images/DSC_3924.jpg')
+      li
+        img(src='images/DSC_0877.jpg')
+      li
+        img(src='images/DSC_1160.jpg')
+
+  script.
+    document.addEventListener('DOMContentLoaded', function() {
+      var elems = document.querySelectorAll('.slider');
+      var options = { duration: 2000, interval: 7000, indicators: false };
+      var instances = M.Slider.init(elems, options);
+    });

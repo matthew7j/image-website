@@ -17,7 +17,7 @@ exports.index = function(req, res) {
 
 // Display list of all Images.
 exports.image_list = function(req, res) {
-    Image.find({}, 'imageUrl')
+    Image.find({}, 'imageUrl _id')
         .exec(function(err, list_images) {
             if (err) {
                 return next(err);
@@ -28,6 +28,7 @@ exports.image_list = function(req, res) {
                 var signedUrl = s3.getSignedUrl('getObject', params);
 
                 image.signedUrl = signedUrl;
+                image.id = image._id;
             });
             res.render('image_list', { title: 'Image List', image_list: list_images });
         });
@@ -35,7 +36,20 @@ exports.image_list = function(req, res) {
 
 // Display detail page for a specific Image.
 exports.image_detail = function(req, res) {
-    res.send('NOT IMPLEMENTED: Image detail: ' + req.params.id);
+    Image.find({_id: req.params.id}, 'imageUrl')
+        .exec(function(err, images) {
+            var image = images[0];
+            if (err) {
+                return next(err);
+            }
+
+            var params = { Bucket: 'dash-data-matt', Key: image.imageUrl.substring(image.imageUrl.lastIndexOf("/") + 1) };
+            var signedUrl = s3.getSignedUrl('getObject', params);
+
+            image.signedUrl = signedUrl;
+
+            res.render('image', { image: image });
+        });
 };
 
 // Display Image create form on GET.

@@ -7,4 +7,5 @@ block content
         div(class='col s6 m4 l3 margin_bottom')
           div(class='card no_margin')
             div(class='card-image')
-              img(src=image.signedUrl)
+              a(href='/photography/image/' + image.id)
+                img(src=image.signedUrl)

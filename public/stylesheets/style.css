@@ -114,6 +114,11 @@ body {
     margin: 0 !important;
 }
 
+.margin_bottom {
+    margin-left: 0 !important;
+    margin-bottom: 15px !important;
+}
+
 .z_bottom {
     z-index: 0;
 }

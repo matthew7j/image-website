@@ -8,12 +8,15 @@ html(lang='en')
     script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/stylesheets/materialize.css', media='screen,projection')
+    link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
 
   body
     nav
       div(class='nav-wrapper')
         a(href='/', class='brand-logo') logo
-        ul(id='nav-mobile', class='right')
+        a(href='#', data-target='mobile-demo', class='sidenav-trigger')
+          i(class='material-icons') menu
+        ul(id='nav-mobile', class='right hide-on-med-and-down')
           li
             a(href='/') Home
           li
@@ -22,23 +25,36 @@ html(lang='en')
             a(href='/photography/gear') Gear
           li 
             a(href='/photography/images') Gallery
-      div
-        block content 
-      footer(class='page-footer z_top footer_outer')
-        div(class='footer-copyright')
-          div(class='footer_container')
-            div(class='footer_row')
-              div(class='icon_container')
-                div(class='col 16 s12')
-                  span(class='icon_container_individual')
-                    a(href='https://instagram.com/matthew7j')
-                      img(class='icon', src="../icons/ig.png")
-                  span(class='icon_container_individual')
-                    a(href='https://www.facebook.com/matthew7j')
-                      img(class='icon', src="../icons/fb.png")
-                  span(class='icon_container_individual')
-                    a(href='https://www.github.com/matthew7j')
-                      img(class='icon', src="../icons/github.png")
-          span(class='footer_container') @2018 Copyright text
+    ul(class='sidenav', id='mobile-demo')
+      li
+        a(href='/') Home
+      li
+        a(href='/photography') Photography
+      li
+        a(href='/photography/gear') Gear
+      li 
+        a(href='/photography/images') Gallery
+    div
+      block content 
+    footer(class='page-footer z_top footer_outer')
+      div(class='footer-copyright')
+        div(class='footer_container')
+          div(class='footer_row')
+            div(class='icon_container')
+              div(class='col 16 s12')
+                span(class='icon_container_individual')
+                  a(href='https://instagram.com/matthew7j')
+                    img(class='icon', src="../icons/ig.png")
+                span(class='icon_container_individual')
+                  a(href='https://www.facebook.com/matthew7j')
+                    img(class='icon', src="../icons/fb.png")
+                span(class='icon_container_individual')
+                  a(href='https://www.github.com/matthew7j')
+                    img(class='icon', src="../icons/github.png")
+        span(class='footer_container') @2018 Copyright text
 
     script(type='text/javascript', src='/javascripts/materialize.js')
+    script.
+      $(document).ready(function(){
+        $('.sidenav').sidenav();
+      });

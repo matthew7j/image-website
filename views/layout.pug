@@ -11,29 +11,35 @@ html(lang='en')
     link(href='https://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
 
   body
+    ul(id='dropdown1', class='dropdown-content')
+      li
+        a(href='/photography/gear') Gear
+      li
+        a(href='/photography/images') Gallery
+    ul(id='dropdown2', class='dropdown-content')
+      li
+        a(href='/photography/gear') Gear
+      li
+        a(href='/photography/images') Gallery
     nav
       div(class='nav-wrapper')
-        a(href='/', class='brand-logo') logo
+        a(href='/', class='brand-logo')
+          img(src='../images/logo.png', height='40', width='150')
         a(href='#', data-target='mobile-demo', class='sidenav-trigger')
           i(class='material-icons') menu
         ul(id='nav-mobile', class='right hide-on-med-and-down')
           li
             a(href='/') Home
           li
-            a(href='/photography') Photography
-          li
-            a(href='/photography/gear') Gear
-          li 
-            a(href='/photography/images') Gallery
-    ul(class='sidenav', id='mobile-demo')
-      li
-        a(href='/') Home
-      li
-        a(href='/photography') Photography
-      li
-        a(href='/photography/gear') Gear
-      li 
-        a(href='/photography/images') Gallery
+            a(class="dropdown-trigger" href="#!" data-target="dropdown1") Photography
+              i(class="material-icons right") arrow_drop_down
+
+      ul(class='sidenav', id='mobile-demo')
+        li
+          a(href='/') Home
+        li
+          a(class="dropdown-trigger" href="#!" data-target="dropdown2") Photography
+              i(class="material-icons right") arrow_drop_down
     div
       block content 
     footer(class='page-footer z_top footer_outer')
@@ -56,5 +62,6 @@ html(lang='en')
     script(type='text/javascript', src='/javascripts/materialize.js')
     script.
       $(document).ready(function(){
+        $(".dropdown-trigger").dropdown({ hover: true });
         $('.sidenav').sidenav();
       });

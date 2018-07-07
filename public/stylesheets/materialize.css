@@ -4484,7 +4484,7 @@ nav .brand-logo {
     color: black;
     display: inline-block;
     font-size: 2.1rem;
-    padding-left: 10px;
+    padding: 10px;
 }
 
 nav .brand-logo.center {
@@ -4581,6 +4581,10 @@ nav ul a.btn-floating>.material-icons {
 
 nav ul a:hover {
     background-color: rgba(0, 0, 0, 0.1);
+}
+
+nav ul a:focus {
+    outline: 0;
 }
 
 nav ul.left {
@@ -5810,7 +5814,7 @@ button.btn-floating {
 .dropdown-content li>a,
 .dropdown-content li>span {
     font-size: 16px;
-    color: #26a69a;
+    color: #000;
     display: block;
     line-height: 22px;
     padding: 14px 16px;
